@@ -1,0 +1,5 @@
+
+config FINGERPRINT_FPC_TEE
+       default n
+       tristate "FPC 1020 family TEE driver support"
+       depends on SPI_MASTER

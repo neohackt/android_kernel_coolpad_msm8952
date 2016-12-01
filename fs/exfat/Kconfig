@@ -1,0 +1,7 @@
+config EXFAT_FS
+	bool "The exFAT filesystem"
+	default n
+	help
+	  This is the next generation of the exFAT filesystem.
+	  If unsure, say N.
+

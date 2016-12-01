@@ -1,0 +1,8 @@
+
+
+config TOUCHSCREEN_FOCALTECH_V1D3D3
+        tristate "Focaltech touchscreen controllers"
+        help
+          "Focaltech touchscreen controller driver.
+          (now supports FT8716 i2c mode only)
+

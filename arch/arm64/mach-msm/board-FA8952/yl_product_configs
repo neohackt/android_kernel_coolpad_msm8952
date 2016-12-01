@@ -1,0 +1,93 @@
+# product config
+
+################################################
+# TP config                                    #
+################################################
+# 1.close Qualcomm sensor configs
+CONFIG_TOUCHSCREEN_SHTSC=n
+CONFIG_TOUCHSCREEN_SHTSC_I2C=n
+CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_CORE_v21=n
+CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_RMI_DEV_v21=n
+CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_FW_UPDATE_v21=n
+CONFIG_TOUCHSCREEN_ATMEL_MXT=n
+CONFIG_TOUCHSCREEN_FT5X06=n
+CONFIG_TOUCHSCREEN_MSTAR21XX=n
+CONFIG_TOUCHSCREEN_GEN_VKEYS=n
+CONFIG_TOUCHSCREEN_SYNAPTICS_I2C_RMI4=n
+CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_RMI4_DEV=n
+CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_FW_UPDATE=n
+CONFIG_TOUCHSCREEN_BU21150=n
+# 2.add YL TP config
+CONFIG_TOUCHSCREEN_FOCALTECH_5446=y
+
+################################################
+# Sensors config                               #
+################################################
+# 1.msm8952 configs
+CONFIG_SENSORS=y
+CONFIG_SENSORS_SSC=n
+CONFIG_SENSORS_ADSP=n
+# 2.close Qualcomm sensor configs
+CONFIG_SENSORS_MPU6050=n
+CONFIG_SENSORS_LIS3DH=n
+CONFIG_SENSORS_MMC3416X=n
+CONFIG_SENSORS_AKM09911=n
+CONFIG_SENSORS_AKM8963=n
+CONFIG_SENSORS_BMA2X2=n
+CONFIG_SENSORS_MC3430=n
+CONFIG_SENSORS_ISL29044A=n
+CONFIG_SENSORS_CAPELLA_CM36283=n
+CONFIG_APDS9930=n
+# 3.add YL sensor config
+CONFIG_MMC_YL_PARAMS=y
+CONFIG_YL_SENSORS_PARAMS=y
+CONFIG_YL_SENSORS_ALSPROX=y
+CONFIG_YL_TXC_PA12200001=y
+CONFIG_YL_SENSORS_HALL=y
+CONFIG_YL_SENSORS_MAG=y
+CONFIG_YL_SENSORS_YAS537=y
+CONFIG_YL_SENSORS_LSM6DS3=y
+CONFIG_YL_SENSORS_LSM6DS3_I2C=y
+CONFIG_YL_SENSORS_LSM6DS3_SPI=n
+
+# anxinlong@yulong.com add for audio
+CONFIG_YL_AUDIO_HEADSET=y
+CONFIG_YL_AUDIO_CODECS=y
+
+################################################
+# charger config                               #
+################################################
+CONFIG_AW2013_LED=y
+CONFIG_AW2013_DEBUG=n
+CONFIG_SMB1351_USB_CHARGER=n
+CONFIG_SMB135X_CHARGER=n
+CONFIG_SMB1360_CHARGER_FG=n
+CONFIG_LPM_MODE=y
+
+################################################
+# LCD config                                   #
+################################################
+CONFIG_YL_LCD_DISPLAY_COMMON=y
+
+################################################
+# FINGERPRINT config                           #
+################################################
+CONFIG_INPUT_FINGERPRINT=y
+CONFIG_FINGERPRINT_FPC_TEE=y
+CONFIG_MSM_TZ_LOG=y
+
+################################################
+# debug config                                 #
+################################################
+CONFIG_SERIAL_MSM_HSL=y
+CONFIG_SERIAL_MSM_HSL_CONSOLE=y
+CONFIG_DEBUG_SPINLOCK=y
+CONFIG_DYNAMIC_DEBUG=y
+
+
+################################################
+# TYPEC  USB                                   #
+################################################
+CONFIG_YL_FAIRCHILDIC_USB_TYPEC=y
+CONFIG_USB_TYPEC_FUSB302=y
+CONFIG_USB_TYPEC_PD_SUPPORT=y

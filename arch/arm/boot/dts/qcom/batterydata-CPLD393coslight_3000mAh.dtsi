@@ -1,0 +1,49 @@
+
+qcom,CPLD393coslight_3000mAh {
+	/* #2363040_Yulong_CPLD393coslight_3000mAh_averaged_MasterSlave_Apr4th2016*/
+	qcom,max-voltage-uv = <4400000>;
+	qcom,nom-batt-capacity-mah = <3000>;
+	qcom,batt-id-kohm = <10>;
+	qcom,battery-beta = <3435>;
+	qcom,battery-type = "CPLD393coslight_3000mAh";
+	qcom,chg-rslow-comp-c1 = <3972982>;
+	qcom,chg-rslow-comp-c2 = <6658507>;
+	qcom,chg-rs-to-rslow = <1166956>;
+	qcom,chg-rslow-comp-thr = <0xB4>;
+	qcom,checksum = <0x4512>;
+	qcom,gui-version = "PMI8950GUI - 2.0.0.15";
+	qcom,fg-profile-data = [
+		 DA 83 7F 7C 
+		 B6 80 5F 76 
+		 62 83 9E 6F 
+		 2F 89 68 94 
+		 25 82 F9 99 
+		 F3 BC 8F C9 
+		 56 0E 04 88 
+		 AF 7D 74 81 
+		 88 77 54 83 
+		 5B 6A BE 78 
+		 51 86 63 82 
+		 AF 98 4A B7 
+		 9E C3 58 11 
+		 35 0C 53 5A 
+		 14 70 B2 FD 
+		 80 34 77 44 
+		 27 40 00 00 
+		 1E 47 D4 30 
+		 8E 3A 00 00 
+		 00 00 00 00 
+		 00 00 00 00 
+		 39 71 52 6B 
+		 E8 6C B6 83 
+		 DB 7C F8 71 
+		 09 56 91 7A 
+		 A9 76 E3 6A 
+		 C0 61 B7 AA 
+		 23 B7 60 EA 
+		 5D A0 71 0C 
+		 28 00 FF 36 
+		 F0 11 30 03 
+		 00 00 00 0C 
+	];
+};

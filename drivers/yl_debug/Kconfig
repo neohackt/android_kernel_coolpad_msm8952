@@ -1,0 +1,31 @@
+#
+# mis
+#
+
+config ANDROID_DEV_DEBUG 
+	bool "android device debug support"
+	help
+	for debug value & gpio change  
+
+config YULONG_DEBUG 
+	bool "debug support"
+	help
+	for debug value & gpio change  
+config YULONG_MODULE_MANAGEMENT 
+	bool "yulong module management support"
+	help
+	  The driver provides an method for on or off device.
+
+config YULONG_USB_UART_SWITCH 
+	bool "yulong usb uart switch"
+	help
+	  The driver provides an method for usb uart switch.	 
+config POWER_DEBUG_COOLPAD 
+	bool "yulong debug power"
+	help
+	  for debug power
+
+config APP_PROFILE 
+	bool "app profile enable"
+	help
+	  for app to set cpufreq,gpufreq and cpucore.

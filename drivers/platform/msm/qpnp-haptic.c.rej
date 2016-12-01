@@ -1,0 +1,68 @@
+diff a/drivers/platform/msm/qpnp-haptic.c b/drivers/platform/msm/qpnp-haptic.c	(rejected hunks)
+@@ -279,6 +283,9 @@ struct qpnp_hap {
+ 	bool sup_brake_pat;
+ 	bool correct_lra_drive_freq;
+ 	bool misc_trim_error_rc19p2_clk_reg_present;
++#ifdef CONFIG_YL_SET_VOLTAGE_LEVEL
++	unsigned int level;
++#endif
+ };
+ 
+ /* helper to read a pmic register */
+@@ -1360,6 +1367,44 @@ static void qpnp_hap_td_enable(struct timed_output_dev *dev, int value)
+ 	schedule_work(&hap->work);
+ }
+ 
++#ifdef CONFIG_YL_SET_VOLTAGE_LEVEL
++//YuLong ADD for level selcet
++static void qpnp_hap_set_level(struct timed_output_dev *dev, int level)
++{
++	struct qpnp_hap *hap = container_of(dev, struct qpnp_hap, timed_dev);
++	u32 set_vmax;
++	unsigned int set_level;
++	int rc;
++	
++
++	if (0 >= level && level > 100) {
++		set_level = 60;
++	} else {
++		set_level = level;
++	}
++       #if defined(CONFIG_BOARD_CP8681_A02)
++        set_vmax = (set_level/25 - 1)*2*116 + 2088;
++        #else
++	set_vmax = (QPNP_HAP_VMAX_MAX_MV - QPNP_HAP_VMAX_MIN_MV)*set_level/100 + QPNP_HAP_VMAX_MIN_MV;
++        #endif
++        pr_err("axl in %s,level=%d,set_vmax=%d\n",__func__,level,set_vmax);
++	hap->vmax_mv = set_vmax;
++	hap->level = set_level;
++	rc = qpnp_hap_vmax_config(hap);
++	if (rc) {
++		return;
++	}
++
++}
++
++static  int qpnp_hap_get_level(struct timed_output_dev *dev)
++{
++	struct qpnp_hap *hap = container_of(dev, struct qpnp_hap, timed_dev);
++
++	return hap->level;
++}
++#endif
++
+ /* worker to opeate haptics */
+ static void qpnp_hap_worker(struct work_struct *work)
+ {
+@@ -1928,6 +1984,11 @@ static int qpnp_haptic_probe(struct spmi_device *spmi)
+ 	hap->timed_dev.name = "vibrator";
+ 	hap->timed_dev.get_time = qpnp_hap_get_time;
+ 	hap->timed_dev.enable = qpnp_hap_td_enable;
++#ifdef CONFIG_YL_SET_VOLTAGE_LEVEL
++	//YuLong ADD for level select
++	hap->timed_dev.set_level = qpnp_hap_set_level;
++	hap->timed_dev.get_level = qpnp_hap_get_level;
++#endif
+ 
+ 	rc = timed_output_dev_register(&hap->timed_dev);
+ 	if (rc < 0) {

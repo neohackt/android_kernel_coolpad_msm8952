@@ -1,0 +1,49 @@
+
+qcom,CPLD400lishen_4000mAh {
+	/* #2525245_Yulong_CPLD400_Lishen_4000mAh_averaged_MasterSlave_Aug2nd2016*/
+	qcom,max-voltage-uv = <4400000>;
+	qcom,nom-batt-capacity-mah = <4000>;
+	qcom,batt-id-kohm = <220>;
+	qcom,battery-beta = <3435>;
+	qcom,battery-type = "CPLD400lishen_4000mAh";
+	qcom,chg-rslow-comp-c1 = <3485627>;
+	qcom,chg-rslow-comp-c2 = <5770900>;
+	qcom,chg-rs-to-rslow = <928935>;
+	qcom,chg-rslow-comp-thr = <0xB2>;
+	qcom,checksum = <0xDC56>;
+	qcom,gui-version = "PMI8950GUI - 2.0.0.16";
+	qcom,fg-profile-data = [
+		 DB 83 9D 7C 
+		 EC 80 F8 76 
+		 61 83 57 6F 
+		 01 89 2A 94 
+		 0E 82 AC 9A 
+		 C0 BD B4 CA 
+		 56 0F F2 83 
+		 E9 7C 01 81 
+		 E8 76 5C 83 
+		 22 58 44 82 
+		 7E 8E 55 82 
+		 B6 99 26 BD 
+		 43 CA 55 0E 
+		 05 10 96 59 
+		 14 70 EE FC 
+		 4B 3F A0 45 
+		 DE 43 00 00 
+		 C2 47 5D 30 
+		 8E 3A 00 00 
+		 00 00 00 00 
+		 00 00 00 00 
+		 26 70 B8 6A 
+		 53 69 83 8A 
+		 53 76 39 70 
+		 4D 64 CA 7B 
+		 33 74 40 69 
+		 9A 76 AF A3 
+		 1D 8E 60 5B 
+		 5F A0 71 0C 
+		 28 00 FF 36 
+		 F0 11 30 03 
+		 00 00 00 0C 
+	];
+};

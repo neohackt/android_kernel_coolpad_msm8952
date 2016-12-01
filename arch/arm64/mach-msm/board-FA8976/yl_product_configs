@@ -1,0 +1,112 @@
+# product config
+
+################################################
+# TP config                                    #
+################################################
+# 1.close Qualcomm sensor configs
+CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_CORE_v21=n
+CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_RMI_DEV_v21=n
+CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_FW_UPDATE_v21=n
+CONFIG_TOUCHSCREEN_ATMEL_MXT=n
+CONFIG_TOUCHSCREEN_FT5X06=n
+CONFIG_TOUCHSCREEN_MSTAR21XX=n
+CONFIG_TOUCHSCREEN_GEN_VKEYS=n
+CONFIG_TOUCHSCREEN_SYNAPTICS_I2C_RMI4=n
+CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_RMI4_DEV=n
+CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_FW_UPDATE=n
+CONFIG_TOUCHSCREEN_BU21150=n
+# 2.add YL TP config
+CONFIG_TOUCHSCREEN_FOCALTECH_5446=n
+CONFIG_TOUCHSCREEN_SHTSC=y
+CONFIG_TOUCHSCREEN_SHTSC_I2C=y
+CONFIG_TOUCHSCREEN_GESTURE_WAKEUP=y
+CONFIG_TOUCHSCREEN_GLOVE=n
+CONFIG_TOUCHSCREEN_WINDOW=n
+CONFIG_TOUCHSCREEN_COB=n
+CONFIG_TOUCHSCREEN_CHARGER_STATUS_CHECK=y
+
+################################################
+# Sensors config                               #
+################################################
+# 1.msm8952 configs
+CONFIG_SENSORS=y
+CONFIG_SENSORS_SSC=y
+#CONFIG_SENSORS_ADSP=n
+# 2.close Qualcomm sensor configs
+CONFIG_SENSORS_MPU6050=n
+CONFIG_SENSORS_LIS3DH=n
+CONFIG_SENSORS_MMC3416X=n
+CONFIG_SENSORS_AKM09911=n
+CONFIG_SENSORS_AKM8963=n
+CONFIG_SENSORS_BMA2X2=n
+CONFIG_SENSORS_MC3430=n
+CONFIG_SENSORS_ISL29044A=n
+CONFIG_SENSORS_CAPELLA_CM36283=n
+CONFIG_APDS9930=n
+# 3.add YL sensor config
+CONFIG_MMC_YL_PARAMS=y
+CONFIG_YL_SENSORS_POWER=n
+CONFIG_YL_SENSORS_PARAMS=n
+CONFIG_YL_SENSORS_ALSPROX=n
+CONFIG_YL_TMD277x_ALSPROX=n
+CONFIG_YL_LTR559_ALSPROX=n
+CONFIG_YL_ACCELER_RANGE_CALIBRATE=n
+CONFIG_YL_SENSORS_HALL=y
+CONFIG_YL_SENSORS_MAG=n
+CONFIG_YL_SENSORS_YAS537=n
+CONFIG_YL_SENSORS_LSM6DS3=n
+CONFIG_YL_SENSORS_LSM6DS3_I2C=n
+CONFIG_YL_SENSORS_LSM6DS3_SPI=n
+
+# anxinlong@yulong.com add for audio
+CONFIG_YL_AUDIO_HEADSET=n
+CONFIG_YL_AUDIO_CODECS=n
+##########################################
+CONFIG_SND_SOC_USE_QUAT_MI2S=n
+#smartPA tfa9890
+CONFIG_SND_SOC_TFA9890_STUB=n
+#smartPA tfa9890 end
+
+
+################################################
+# charger config                               #
+################################################
+CONFIG_AW2013_LED=n
+CONFIG_AW2013_DEBUG=n
+CONFIG_SMB1351_USB_CHARGER=n
+CONFIG_SMB135X_CHARGER=n
+CONFIG_SMB1360_CHARGER_FG=n
+CONFIG_LPM_MODE=y
+CONFIG_YL_BQ25890_CHARGER=y
+
+################################################
+# LCD config                                   #
+################################################
+CONFIG_YL_LCD_DISPLAY_COMMON=n
+
+################################################
+# FINGERPRINT config                           #
+################################################
+CONFIG_INPUT_FINGERPRINT=n
+CONFIG_FINGERPRINT_FPC_TEE=n
+CONFIG_FINGERPRINT_TEE=n
+CONFIG_MSM_TZ_LOG=y
+
+################################################
+# debug config                                 #
+################################################
+CONFIG_SERIAL_MSM_HSL=y
+CONFIG_SERIAL_MSM_HSL_CONSOLE=y
+# add by Aliang for uart debug 20 
+CONFIG_YL_CLOSE_SERIAL_HSL=n 
+CONFIG_DEBUG_SPINLOCK=y
+CONFIG_DYNAMIC_DEBUG=y
+
+##frankie add for pstore##
+CONFIG_PSTORE=y
+CONFIG_PSTORE_CONSOLE=y
+CONFIG_PSTORE_RAM=y
+CONFIG_PSTORE_FTRACE=y
+
+CONFIG_YL_PSTORE=y
+##pstore end##

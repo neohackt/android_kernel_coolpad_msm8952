@@ -1,0 +1,14 @@
+menuconfig RAON_REMOTE_CONTROLLER
+	bool "Enable Remote IR Controller"
+	default y
+	---help---
+	  Say Y here to get to see options for device drivers for REMOTE IR CONTROLLER.
+	  If you say N, all options in this submenu will be skipped and disabled.
+if RAON_REMOTE_CONTROLLER
+
+config RAON_REMOTE_CTRL_SOC
+	tristate "Remote IR Controller"
+	default n
+	help
+	  This enables support for Remote IR Controller
+endif

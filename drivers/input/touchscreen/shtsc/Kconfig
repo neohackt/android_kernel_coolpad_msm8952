@@ -1,0 +1,22 @@
+config TOUCHSCREEN_SHTSC
+	tristate "SHARP touchscreen controllers"
+	help
+	  SHARP touchscreen controller driver.
+	  Do not forget to define either TOUCHSCREEN_SHTSC_I2C or TOUCHSCREEN_SHTSC_SPI
+	  (now supports LR388K5 i2c mode only)
+
+config TOUCHSCREEN_SHTSC_I2C
+	tristate "SHARP touchscreen driver for I2C"
+	depends on I2C && TOUCHSCREEN_SHTSC
+	help
+	  SHARP I2C touchscreen driver
+
+config TOUCHSCREEN_CHARGER_STATUS_CHECK
+       bool "touchscreen charger status check support"
+       depends on I2C
+       default n
+       help
+         Say Y here to enable support for charger status check.
+         If unsure, say N.
+
+

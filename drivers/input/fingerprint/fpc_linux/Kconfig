@@ -1,0 +1,5 @@
+
+config FINGERPRINT_FPC_FULL_FUNCTION
+       default m
+       tristate "FPC 1020 family fingerprint sensor support"
+       depends on SPI_MASTER

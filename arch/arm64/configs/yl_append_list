@@ -1,0 +1,44 @@
+﻿# WARNING!!! There should be no null line!
+# 警告!!! 本文中不允许出现空行!!
+#
+# a line start with '#' is taken as comment
+# a line should be less than 255 bytes, as file parser use buffer[256]
+#
+# 以#开始的行, 表示注释.
+# 每行不得超过255个字节
+#
+# a basic style in this file is
+# aENV	ENV_value	aFile
+# this style tells, if enviroment variable aENV is set to ENV_value,
+# then aFile is append to kernel's default config fil,
+# such as msm8994_defconfig.
+# 上面列出本文件的基本格式,
+# 表达的意图是, 如果环境变量aENV的值为ENV_value,就启用aFile.
+# 所谓启用aFile,就是把它的内容追加到缺省配置文件, 用来增加/修改缺省内核配置
+#
+# another style is
+# aENV	!ENV_value	aFile
+# It tells, if aENV's value is not equal to ENV_value, aFile is applied.
+# 这个表达, 如果aENV的值不是ENV_value, 就启用aFile
+#
+# another style is
+# aENV	*	aFile
+# It tells, aFile is applied no matter what value is aENV
+# 这个表达, 如果aENV的值不论是什么, 都启用aFile
+# 暂时无法想像这一句的意义:  aENV !* aFile
+#
+# Last style is
+# aENV	aENV_value	&
+# bENV	bENV_value	aFile
+# It tells, if aENV's value is aENV_value, while bENV's value is bENV_value,
+# then aFile is applied.
+# 这个表达, 同时满足两个条件——aENV的值为aENV_value, 和bENV的值为bENV_value,
+# 才会启用aFile
+#
+# If you want to express a "OR", just write
+# aENV	aENV_value	aFile
+# bENV	bENV_value	aFile
+# that means
+# if ($aENV == aENV_value || $bENV == bENV_value)
+#	apply aFile
+#PRO_NAME	*	arch/arm64/configs/yl_full_defconfig

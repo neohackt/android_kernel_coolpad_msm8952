@@ -1,0 +1,49 @@
+
+qcom,CPLD373_10K {
+	/* #2260274_Yulong_A8_932_Coslight_2800mAh_averaged_MasterSlave_Dec28th2015*/
+	qcom,max-voltage-uv = <4400000>;
+	qcom,nom-batt-capacity-mah = <2800>;
+	qcom,batt-id-kohm = <10>;
+	qcom,battery-beta = <3435>;
+	qcom,battery-type = "CPLD373_10K";
+	qcom,chg-rslow-comp-c1 = <4936273>;
+	qcom,chg-rslow-comp-c2 = <10957680>;
+	qcom,chg-rs-to-rslow = <1080662>;
+	qcom,chg-rslow-comp-thr = <0xC6>;
+	qcom,checksum = <0x5901>;
+	qcom,gui-version = "PMI8950GUI - 2.0.0.15";
+	qcom,fg-profile-data = [
+		 E2 83 E3 7C 
+		 35 81 8C 77 
+		 62 83 C7 6F 
+		 2A 89 3D 94 
+		 83 82 75 92 
+		 13 B4 EB BA 
+		 52 17 F1 83 
+		 04 7D 3A 81 
+		 83 77 60 83 
+		 A1 64 25 88 
+		 ED 8F 42 82 
+		 E5 99 29 BD 
+		 1F CA 54 0E 
+		 6C 0B 0F 59 
+		 14 70 D9 FD 
+		 70 35 DC 44 
+		 8E 3A 00 00 
+		 E7 46 93 30 
+		 97 38 00 00 
+		 00 00 00 00 
+		 00 00 00 00 
+		 54 71 8D 6B 
+		 F6 66 69 90 
+		 6B 7D 32 73 
+		 87 7C C4 69 
+		 10 7C 1F 71 
+		 BD 67 5E A8 
+		 23 24 61 8F 
+		 5E A0 71 0C 
+		 28 00 FF 36 
+		 F0 11 30 03 
+		 00 00 00 0C 
+	];
+};

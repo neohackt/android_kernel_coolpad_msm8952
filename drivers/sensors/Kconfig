@@ -1,0 +1,43 @@
+menu "Sensors Device Driver"
+
+config SENSORS
+	bool "Sensors Class Support"
+	help
+	  This option enables the sensor sysfs class in /sys/class/sensors.
+	  You'll need this to do anything useful with sensorss. If unsure, say N.
+
+config SENSORS_SSC
+	bool "Enable Sensors Driver Support for SSC"
+	help
+	  Add support for sensors SSC driver.
+	  This driver is used for exercising sensors use case,
+	  time syncing with ADSP clock.
+
+config YL_SENSORS_MAG
+    tristate "YAS533 or YAS537"
+    depends on I2C
+    default n
+    help
+        Say Y here if you have any sensor device (yas537 ...)
+        connected to your system and want it to be available to applications.
+        Say N here if you have a headless (no yas533...) system.
+        If unsure, say Y.
+config LPM_MODE
+	bool "Sensors LPM mode"
+	help
+	  This option enables poweroffcharging .
+	  You'll need this to do anything useful with sensorss. If unsure, say N.
+# Kconfig for YL sensors
+if SENSORS
+    source "drivers/sensors/sensparams/Kconfig"
+    source "drivers/sensors/alsprox/Kconfig"
+    source "drivers/sensors/accel/Kconfig"
+    source "drivers/sensors/hall/Kconfig"
+    source "drivers/sensors/magnetometer/Kconfig"
+    source "drivers/sensors/lsm6ds3/Kconfig"
+    source "drivers/sensors/remote/Kconfig"
+endif
+if YL_SENSORS_GSENSOR
+source "drivers/sensors/accel/n2dm/Kconfig"
+endif
+endmenu

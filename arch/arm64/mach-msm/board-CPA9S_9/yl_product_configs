@@ -1,0 +1,87 @@
+# product config
+
+################################################
+# TP config                                    #
+################################################
+CONFIG_TOUCHSCREEN_SYNAPTICS_I2C=y
+CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_V2D6D1=y
+CONFIG_TOUCHSCREEN_GT1XX=n
+CONFIG_TOUCHSCREEN_GESTURE_WAKEUP=n
+CONFIG_TOUCHSCREEN_GLOVE=n
+CONFIG_TOUCHSCREEN_WINDOW=n
+CONFIG_TOUCHSCREEN_COB=n
+CONFIG_TOUCHSCREEN_CHARGER_STATUS_CHECK=n
+################################################
+# Sensors config                               #
+################################################
+#add YL sensor config
+CONFIG_MMC_YL_PARAMS=y
+CONFIG_YL_SENSORS_POWER=n
+CONFIG_YL_SENSORS_PARAMS=n
+CONFIG_YL_SENSORS_ALSPROX=n
+CONFIG_YL_TMD277x_ALSPROX=n
+CONFIG_YL_LTR559_ALSPROX=n
+CONFIG_YL_ACCELER_RANGE_CALIBRATE=n
+CONFIG_YL_SENSORS_HALL=y
+CONFIG_YL_SENSORS_MAG=n
+CONFIG_YL_SENSORS_YAS537=n
+CONFIG_YL_SENSORS_LSM6DS3=n
+CONFIG_YL_SENSORS_LSM6DS3_I2C=n
+CONFIG_YL_SENSORS_LSM6DS3_SPI=n
+
+# anxinlong@yulong.com add for audio
+CONFIG_YL_AUDIO_HEADSET=y
+CONFIG_YL_AUDIO_CODECS=y
+##########################################
+CONFIG_SND_SOC_USE_QUAT_MI2S=n
+CONFIG_SND_SOC_USE_QUIN_MI2S=y
+#smartPA tfa9890
+CONFIG_SND_SOC_TFA9890_STUB=y
+#smartPA tfa9890 end
+
+
+################################################
+# charger config                               #
+################################################
+CONFIG_AW2013_LED=n
+CONFIG_AW2013_DEBUG=n
+CONFIG_LPM_MODE=y
+CONFIG_YL_BQ25890_CHARGER=y
+CONFIG_YL_FAIRCHILDIC_USB_TYPEC=y
+CONFIG_FUSB_30X=y
+
+################################################
+# LCD config                                   #
+################################################
+CONFIG_YL_LCD_DISPLAY_COMMON=y
+
+################################################
+# NXP NFC config                               #
+################################################
+CONFIG_NFC_NXP_PN5XX=y
+CONFIG_NFC_NQ=n
+
+################################################
+# FINGERPRINT config                           #
+################################################
+CONFIG_INPUT_FINGERPRINT=y
+CONFIG_FINGERPRINT_FPC_TEE=n
+CONFIG_FINGERPRINT_TEE=y
+CONFIG_MSM_TZ_LOG=y
+
+################################################
+# debug config                                 #
+################################################
+# add by Aliang for uart debug 20 
+CONFIG_YL_CLOSE_SERIAL_HSL=n
+
+#add for ktd led
+CONFIG_KTD2026_LED=y
+#add end
+
+# add xdja se by huangqingjun #
+CONFIG_SPI_MASTER=y
+CONFIG_SPI_SPIDEV=y
+CONFIG_SPI_QUP=y
+CONFIG_SPI=y
+# add xdja se by huangqingjun end #

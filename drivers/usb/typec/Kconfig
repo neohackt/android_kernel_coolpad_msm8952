@@ -1,0 +1,4 @@
+config FUSB_30X
+    tristate "Fairchild Fusb302 TypeC"
+    help
+    This driver support the TypeC Fusb302 chip

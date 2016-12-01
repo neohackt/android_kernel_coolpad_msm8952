@@ -1,0 +1,22 @@
+#
+# Magnetometer sensors
+#
+menu "Magnetometer sensors"
+
+config YL_SENSORS_YAS533
+	tristate "Yamaha 3-Axis Magnetometer"
+	depends on I2C
+	default n
+	help
+	  Say Y here to add support for the Yamaha 3-Axis Magnetometer.
+
+config YL_SENSORS_YAS537
+	tristate "Yamaha 3-Axis Magnetometer"
+	depends on I2C
+	default n
+	help
+	   Say Y here to add support for the Yamaha 3-Axis Magnetometer
+
+endmenu
+
+

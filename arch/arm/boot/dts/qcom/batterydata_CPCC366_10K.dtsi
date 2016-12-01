@@ -1,0 +1,49 @@
+
+qcom,CPCC366_10K {
+	/* #2097764_Yulong_CPCC_3000mAh_averaged_MasterSlave_Aug4th2015*/
+	qcom,max-voltage-uv = <4350000>;
+	qcom,nom-batt-capacity-mah = <3000>;
+	qcom,batt-id-kohm = <10>;
+	qcom,battery-beta = <3435>;
+	qcom,battery-type = "CPCC366_10K";
+	qcom,chg-rslow-comp-c1 = <2812738>;
+	qcom,chg-rslow-comp-c2 = <3356209>;
+	qcom,chg-rs-to-rslow = <773301>;
+	qcom,chg-rslow-comp-thr = <0x99>;
+	qcom,checksum = <0xEB49>;
+	qcom,gui-version = "PMI8950GUI - 2.0.0.11";
+	qcom,fg-profile-data = [
+		 EB 83 08 7D 
+		 02 81 0A 77 
+		 57 83 6C 5C 
+		 91 81 A2 8C 
+		 17 82 35 9A 
+		 42 BD 30 CA 
+		 5C 0E 05 88 
+		 9C 7D 5C 81 
+		 A9 77 3C 83 
+		 92 78 8F 84 
+		 0F 7B 62 82 
+		 F1 98 0D BC 
+		 74 C8 5E 15 
+		 29 0C 99 5B 
+		 CE 6E 77 FE 
+		 F6 3D 85 45 
+		 C6 42 00 00 
+		 57 4C 78 38 
+		 8E 32 00 00 
+		 00 00 00 00 
+		 00 00 00 00 
+		 28 70 9F 69 
+		 4C 51 BA 8B 
+		 35 7D 55 72 
+		 29 6C 5A 80 
+		 65 77 08 70 
+		 4E 6D EB A8 
+		 23 DB 59 8D 
+		 55 A0 71 0C 
+		 28 00 FF 36 
+		 F0 11 30 03 
+		 00 00 00 0C 
+	];
+};

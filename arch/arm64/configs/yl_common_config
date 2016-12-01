@@ -1,0 +1,92 @@
+#yulong add for msm_defconfig not using macro
+# ONFIG_HI256 is not set
+# CONFIG_MT9M114 is not set
+# CONFIG_OV5645 is not set
+# CONFIG_OV2685 is not set
+# CONFIG_OV2685_SCV3B4035 is not set
+
+#yulong close the baseline not using config. start. 2016.03.05
+# CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_CORE_v21 is not set
+# CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_RMI_DEV_v21 is not set
+# CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_FW_UPDATE_v21 is not set
+# CONFIG_TOUCHSCREEN_ATMEL_MXT is not set
+# CONFIG_TOUCHSCREEN_FT5X06 is not set
+# CONFIG_TOUCHSCREEN_MSTAR21XX is not set
+# CONFIG_TOUCHSCREEN_GEN_VKEYS is not set
+# CONFIG_TOUCHSCREEN_SYNAPTICS_I2C_RMI4 is not set
+# CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_RMI4_DEV is not set
+# CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_FW_UPDATE is not set
+# CONFIG_TOUCHSCREEN_BU21150 is not set
+#yulong close the baseline not using config. end. 2015.01.27
+
+# CONFIG_SENSORS_MPU6050 is not set
+# CONFIG_SENSORS_LIS3DH is not set
+# CONFIG_SENSORS_MMC3416X is not set
+# CONFIG_SENSORS_AKM09911 is not set
+# CONFIG_SENSORS_AKM8963 is not set
+# CONFIG_SENSORS_BMA2X2 is not set
+# CONFIG_SENSORS_MC3430 is not set
+# CONFIG_SENSORS_ISL29044A is not set
+# CONFIG_SENSORS_CAPELLA_CM36283 is not set
+# ONFIG_SENSORS_ADSP is not set
+# CONFIG_APDS9930 is not set
+
+# yulong disable coresight as no trace32
+# CONFIG_CORESIGHT is not set
+# CONFIG_CORESIGHT_EVENT is not set
+# CONFIG_CORESIGHT_FUSE is not set
+# CONFIG_CORESIGHT_CTI is not set
+# CONFIG_CORESIGHT_TMC is not set
+# CONFIG_CORESIGHT_TPIU is not set
+# CONFIG_CORESIGHT_FUNNEL is not set
+# CONFIG_CORESIGHT_REPLICATOR is not set
+# CONFIG_CORESIGHT_TPDA is not set
+# CONFIG_CORESIGHT_TPDM is not set
+# CONFIG_CORESIGHT_STM is not set
+# CONFIG_CORESIGHT_HWEVENT is not set
+# CONFIG_CORESIGHT_ETMV4 is not set
+# CONFIG_CORESIGHT_DBGUI is not set
+# CONFIG_CORESIGHT_REMOTE_ETM is not set
+# CONFIG_CORESIGHT_QPDI is not set
+
+#close for charge
+# CONFIG_SMB1351_USB_CHARGER is not set
+# CONFIG_SMB135X_CHARGER is not set
+# CONFIG_SMB1360_CHARGER_FG is not set
+
+#add for huangrui by yulong
+#CONFIG_DEVMEM is not set
+#CONFIG_DEVKMEM is not set
+
+# yulong common config
+CONFIG_NFC_NQ=n
+CONFIG_MMC_CQ_HCI=n
+#yulong add for USB
+CONFIG_USB_YL_CDROM=y
+CONFIG_USB_YL_CHARGE_ONLY=y
+
+#CONFIG_RAON_REMOTE_CTRL_SOC=y
+
+CONFIG_YL_BOOTREASON=y
+
+##### yl pm debug feature start######
+CONFIG_YL_PM_DEBUG=y
+CONFIG_YULONG_DEBUG=y
+CONFIG_YULONG_MODULE_MANAGEMENT=y
+CONFIG_YL_WAKEUP_REASON=y
+CONFIG_YL_POWER_ON_REASON=y
+##### yl pm debug feature end########
+
+##### yl set voltage level feature start######
+CONFIG_YL_SET_VOLTAGE_LEVEL=y
+##### yl set voltage level feature end########
+##### qcom patch config end########
+CONFIG_MSM_SMART_SUPPORT=y
+
+
+# yulong add for exfat file system
+CONFIG_EXFAT_FS=y
+CONFIG_NLS_UTF8=y
+
+
+
